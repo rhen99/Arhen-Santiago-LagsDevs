@@ -23,6 +23,7 @@ nav {
 	top: 0;
 	background-color: #e6e6ff;
 	width: 100%;
+	padding-bottom: 5px;
 }
 #nav-menu {
 	display: flex;
@@ -42,10 +43,7 @@ nav {
 .nav-link:hover {
 	color: #00091a;
 }
-.active {
-	color: #00091a;
-	border-bottom: 3px dotted #00091a;
-}
+
 .logo {
 	flex-basis: 50%;
 	padding: 0.2rem;
@@ -54,11 +52,12 @@ nav {
 	width: 150px;
 }
 section {
-	height: 100vh;
+	min-height: 100vh;
 	overflow: hidden;
 	padding: 2.8rem 1rem;
 }
 section h1 {
+	padding-top: 5px;
 	text-align: center;
 	font-weight: 300;
 }
@@ -180,8 +179,16 @@ footer p {
 }
 
 @media (min-width: 768px) {
+	section h1 {
+		padding-top: 0;
+	}
+	.active {
+		color: #00091a;
+		border-bottom: 1px dotted #00091a;
+	}
 	nav {
 		flex-direction: row;
+		padding-bottom: 0;
 	}
 	#nav-menu {
 		flex-basis: 50%;
